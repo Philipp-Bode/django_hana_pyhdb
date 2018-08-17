@@ -217,6 +217,13 @@ class DatabaseWrapper(BaseDatabaseWrapper):
 
     Database = Database
 
+    client_class = DatabaseClient
+    creation_class = DatabaseCreation
+    features_class = DatabaseFeatures
+    introspection_class = DatabaseIntrospection
+    validation_class = BaseDatabaseValidation
+    ops_class = DatabaseOperations
+
     def __init__(self, *args, **kwargs):
         super(DatabaseWrapper, self).__init__(*args, **kwargs)
 
